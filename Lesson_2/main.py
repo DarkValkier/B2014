@@ -9,7 +9,9 @@ player2 = Character(name='Petya', health=90, damage=1,
                     color=Fore.LIGHTBLUE_EX)
 print(player2)
 
-player1.attack(player2)
+while player1.is_alive() and player2.is_alive():
+    player1.attack(player2)
+    player2.attack(player1)
 
-print(player1)
-print(player2)
+    print(player1)
+    print(player2)
